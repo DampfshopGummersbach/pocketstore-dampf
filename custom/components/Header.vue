@@ -1,5 +1,5 @@
 <template>
-  <div class="px-3 mx-auto max-w-6xl mb-3">
+  <div class="px-3 xl:px-0 mx-auto max-w-6xl mb-3">
     <section
       class="bg-black rounded-xl mx-auto max-w-6xl px-3 py-3 text-white flex justify-between items-end"
     >
@@ -47,31 +47,14 @@
         </div>
       </nav>
     </section>
-    <section class="mobile-content my-2">
+    <section v-if="open" class="mobile-content my-2">
       <section class="grid grid-cols-6 gap-3 bg-gray-400 px-3 py-3">
-        <div class="col-span-2">
-          <a href="/" class="btn btn-neutral btn-sm btn-block">Startseite</a>
-        </div>
-        <div class="col-span-2">
-          <a href="/de/categories" class="btn btn-neutral btn-sm btn-block"
-            >Kategorien</a
-          >
-        </div>
-        <div class="col-span-2">
-          <a href="/" class="btn btn-neutral btn-sm btn-block">Startseite</a>
-        </div>
-        <div class="col-span-2">
-          <a href="/" class="btn btn-neutral btn-sm btn-block">Startseite</a>
-        </div>
-        <div class="col-span-2">
-          <a href="/" class="btn btn-neutral btn-sm btn-block">Startseite</a>
-        </div>
         <div
           v-for="category in categories"
           :key="category.id"
           class="col-span-2"
         >
-          <a href="/" class="btn btn-neutral btn-sm btn-block">{{
+          <a: :href="'/de/category/'+category.slug+'.html'" class="btn btn-neutral btn-sm btn-block">{{
             category.name
           }}</a>
         </div>
