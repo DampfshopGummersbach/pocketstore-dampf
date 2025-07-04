@@ -54,7 +54,7 @@
           :key="category.id"
           class="col-span-2"
         >
-          <a: :href="'/de/category/'+category.slug+'.html'" class="btn btn-neutral btn-sm btn-block">{{
+          <a href="/" class="btn btn-neutral btn-sm btn-block">{{
             category.name
           }}</a>
         </div>
