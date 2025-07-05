@@ -3,8 +3,10 @@
     <section
       class="bg-black rounded-xl mx-auto max-w-6xl px-3 py-3 text-white flex justify-between items-end"
     >
-      <section class="logo text-2xl flex items-center">
-        Gummersbach-Dampfer.shop
+      <section class="logo text-xl md:text-2xl flex items-center">
+        <a href="/">
+          Gummersbach-Dampfer.shop
+        </a>
       </section>
       <nav class="desktop hidden md:flex">
         <ul class="flex space-x-6">
@@ -52,7 +54,7 @@
         <div
           v-for="category in categories"
           :key="category.id"
-          class="col-span-2"
+          class="col-span-3"
         >
           <a :href="'/de/category/'+category.slug+'.html'" class="btn btn-neutral btn-sm btn-block">{{
             category.name
@@ -79,5 +81,6 @@ const load = async () => {
 
 onMounted(() => {
   load();
+  open.value = false;
 });
 </script>
